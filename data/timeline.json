@@ -1,0 +1,120 @@
+[
+  {
+    "id": "emirates-2025",
+    "title": "Lead Senior QA Engineer",
+    "subtitle": "The Emirates Group",
+    "type": "job",
+    "startDate": "2025-01",
+    "description": "Improving maturity of all quality and engineering processes across the SDLC. Introducing Policies, Processes and Procedures. Improving Agile/Scrum ceremonies. Testing an internal AI system converting business briefs into JIRA stories.",
+    "skills": ["agile-safe-scrum", "sdlc", "policies-processes", "people-process-tech", "risk-management"],
+    "nodeId": "emirates"
+  },
+  {
+    "id": "scayle-2022",
+    "title": "Senior QA Engineer",
+    "subtitle": "SCAYLE GmbH (ABOUT YOU SE & Co. KG)",
+    "type": "job",
+    "startDate": "2022-03",
+    "endDate": "2025-01",
+    "description": "Developed API testing strategy for a new e-commerce SaaS platform, increasing test coverage by 60x. Implemented CI/CD pipelines in GitLab. Improved Defect Management processes and QA documentation.",
+    "skills": ["api-automation", "postman", "javascript", "gitlab-cicd", "test-strategy", "defect-management", "regression-testing"],
+    "nodeId": "scayle"
+  },
+  {
+    "id": "aerdata-2014",
+    "title": "Software QA Lead",
+    "subtitle": "AerData B.V. (Boeing) via Ključ savjetovanje",
+    "type": "job",
+    "startDate": "2014-11",
+    "endDate": "2022-02",
+    "description": "Aviation industry asset management software. Created test strategy, automated performance testing over 10+ microservices (JMeter → ADO → Blazemeter). Applied InfoSec fundamentals: NIST, OWASP, SANS. Led E2E automation using Ranorex, Selenium, TestCafe.",
+    "skills": ["ranorex", "jmeter", "blazemeter", "azuredevops", "selenium", "soapui", "testcafe", "e2e-testing", "performance-testing", "risk-management", "nist-csf", "owasp", "sans"],
+    "nodeId": "aerdata"
+  },
+  {
+    "id": "istqb-agile",
+    "title": "ISTQB Certified Agile Tester",
+    "subtitle": "ISTQB",
+    "type": "cert",
+    "startDate": "2018-01",
+    "description": "Certified in Agile testing methodologies by the International Software Testing Qualifications Board.",
+    "skills": ["agile-safe-scrum", "test-strategy"],
+    "nodeId": "istqb-agile-cert"
+  },
+  {
+    "id": "istqb-foundation",
+    "title": "ISTQB Certified Tester",
+    "subtitle": "ISTQB Foundation Level",
+    "type": "cert",
+    "startDate": "2015-01",
+    "description": "Foundation Level certification — the international standard for software testing qualification.",
+    "skills": ["test-strategy", "sdlc"],
+    "nodeId": "istqb-cert"
+  },
+  {
+    "id": "digitalium-2012",
+    "title": "Lead Tester",
+    "subtitle": "Digitalium d.o.o.",
+    "type": "job",
+    "startDate": "2012-10",
+    "endDate": "2014-02",
+    "description": "Lead Tester on an international project developing a new online & offline classifieds platform. Tested BackOffice and FrontEnd, organised team testing tasks, wrote test-cases, reported bugs, SEO adjustments, reported to Project managers and Investors.",
+    "skills": ["e2e-testing", "regression-testing", "defect-management"],
+    "nodeId": "digitalium"
+  },
+  {
+    "id": "oglasnik-2005",
+    "title": "Product Manager → BU Online Manager → Category Manager → Sales",
+    "subtitle": "Oglasnik d.o.o.",
+    "type": "job",
+    "startDate": "2005-10",
+    "endDate": "2012-08",
+    "description": "7-year journey: Sales → Category Manager (AdWords, SEO, real estate) → BU Online Manager (30 people, 5 sites, full P&L) → Product Manager (entire online business of Oglasnik brand). Led development, marketing, and revenue strategy.",
+    "skills": ["javascript", "problem-solving", "analytical", "communication"],
+    "nodeId": "oglasnik"
+  },
+  {
+    "id": "distribucija-2004",
+    "title": "Central Distribution Manager",
+    "subtitle": "Distribucija promotivnih materijala d.o.o.",
+    "type": "job",
+    "startDate": "2004-03",
+    "endDate": "2005-10",
+    "description": "Central Distribution Manager for Croatia.",
+    "skills": [],
+    "nodeId": "distribucija"
+  },
+  {
+    "id": "estudio-2003",
+    "title": "Owner / Founder",
+    "subtitle": "e-Studio (Advertising & IT)",
+    "type": "job",
+    "startDate": "2003-03",
+    "endDate": "2005-10",
+    "description": "Founded and ran e-Studio, an advertising and IT company. Services: web design, database programming, prepress, IT maintenance.",
+    "skills": ["javascript"],
+    "nodeId": "estudio"
+  },
+  {
+    "id": "siemens-2001",
+    "title": "Programmer, Mobile Networks",
+    "subtitle": "Siemens d.d.",
+    "type": "job",
+    "startDate": "2001-04",
+    "endDate": "2001-10",
+    "description": "Programmer for mobile networks — assembler coding.",
+    "skills": [],
+    "nodeId": "siemens"
+  },
+  {
+    "id": "zagreb-uni-2001",
+    "title": "Computer Science Engineer",
+    "subtitle": "Zagreb University of Applied Sciences",
+    "type": "education",
+    "startDate": "1997-09",
+    "endDate": "2001-06",
+    "description": "Bachelor's degree in Computer Science Engineering with high distinction. Average grade 4.54 / 5.0.",
+    "skills": ["javascript", "sdlc"],
+    "nodeId": "zagreb-uni"
+  }
+]

@@ -1,0 +1,661 @@
+{
+  "nodes": [
+    {
+      "id": "zoran",
+      "name": "Zoran Šapić",
+      "type": "self",
+      "group": "core",
+      "val": 25,
+      "metadata": {
+        "title": "Quality Manager / Lead Senior QA Engineer",
+        "bio": "25+ years of experience across QA, software testing, product management, and digital business. ISTQB Certified. Currently Lead Senior QA Engineer at The Emirates Group, Dubai.",
+        "location": "Zagreb, Croatia",
+        "email": "zoran.sapic@gmail.com",
+        "linkedin": "hr.linkedin.com/in/zoransapic/",
+        "phone": "+385 99 2717 802"
+      }
+    },
+    {
+      "id": "emirates",
+      "name": "The Emirates Group",
+      "type": "job",
+      "group": "work",
+      "val": 16,
+      "metadata": {
+        "company": "The Emirates Group",
+        "title": "Lead Senior QA Engineer",
+        "location": "Dubai, UAE",
+        "start": "2025-01",
+        "description": "Improving maturity level of all quality and adjacent engineering processes across the SDLC. Introducing Policies, Processes and Procedures. Improving Agile/Scrum processes & ceremonies. Testing an internal AI system that converts business briefs into feature requirements and JIRA stories, including a coding assistant."
+      }
+    },
+    {
+      "id": "scayle",
+      "name": "SCAYLE GmbH",
+      "type": "job",
+      "group": "work",
+      "val": 15,
+      "metadata": {
+        "company": "SCAYLE GmbH (ABOUT YOU SE & Co. KG)",
+        "title": "Senior QA Engineer",
+        "location": "Remote",
+        "start": "2022-03",
+        "end": "2025-01",
+        "description": "Working on development of a new e-commerce SaaS platform. Developed API testing strategy that increased test coverage by 60x. Implemented CI/CD pipelines (GitLab) and E2E test automation for back-end applications. Improved Defect Management processes."
+      }
+    },
+    {
+      "id": "aerdata",
+      "name": "AerData B.V. (Boeing)",
+      "type": "job",
+      "group": "work",
+      "val": 15,
+      "metadata": {
+        "company": "Ključ savjetovanje d.o.o. – working for AerData B.V. Netherlands, a Boeing Company",
+        "title": "Software QA Lead",
+        "location": "Remote / Zagreb",
+        "start": "2014-11",
+        "end": "2022-02",
+        "description": "Working on aviation industry-standard asset management software. Created and implemented Test Strategy; automated performance testing over 10+ microservices (JMeter → ADO pipeline → Blazemeter). Applied InfoSec fundamentals: NIST CyberSecurity Framework, NIST800-53r4, OWASP, SANS."
+      }
+    },
+    {
+      "id": "digitalium",
+      "name": "Digitalium d.o.o.",
+      "type": "job",
+      "group": "work",
+      "val": 10,
+      "metadata": {
+        "company": "Digitalium d.o.o.",
+        "title": "Lead Tester",
+        "location": "Zagreb, Croatia",
+        "start": "2012-10",
+        "end": "2014-02",
+        "description": "Lead Tester on an international project — development of new online & offline classifieds platform. Testing BackOffice and FrontEnd, organising testing tasks, writing test-cases, reporting bugs, SEO adjustments."
+      }
+    },
+    {
+      "id": "oglasnik",
+      "name": "Oglasnik d.o.o.",
+      "type": "job",
+      "group": "work",
+      "val": 13,
+      "metadata": {
+        "company": "Oglasnik d.o.o.",
+        "title": "Product Manager / BU Online Manager / Category Manager / Sales",
+        "location": "Zagreb, Croatia",
+        "start": "2005-10",
+        "end": "2012-08",
+        "description": "7 years across multiple roles: Sales → Category Manager (real estate, AdWords, SEO) → BU Online Manager (30 people, 5 sites) → Product Manager (responsible for entire online business). Led development, marketing, and revenue for Oglasnik.hr."
+      }
+    },
+    {
+      "id": "distribucija",
+      "name": "Distribucija promotivnih mat.",
+      "type": "job",
+      "group": "work",
+      "val": 7,
+      "metadata": {
+        "company": "Distribucija promotivnih materijala d.o.o.",
+        "title": "Central Distribution Manager",
+        "location": "Croatia",
+        "start": "2004-03",
+        "end": "2005-10",
+        "description": "Central Distribution Manager for Croatia."
+      }
+    },
+    {
+      "id": "estudio",
+      "name": "e-Studio",
+      "type": "job",
+      "group": "work",
+      "val": 8,
+      "metadata": {
+        "company": "e-Studio",
+        "title": "Owner / Founder",
+        "location": "Zagreb, Croatia",
+        "start": "2003-03",
+        "end": "2005-10",
+        "description": "Owner of advertising and IT company e-Studio. Web design, database programming, prepress, IT maintenance."
+      }
+    },
+    {
+      "id": "siemens",
+      "name": "Siemens d.d.",
+      "type": "job",
+      "group": "work",
+      "val": 7,
+      "metadata": {
+        "company": "Siemens d.d.",
+        "title": "Programmer",
+        "location": "Zagreb, Croatia",
+        "start": "2001-04",
+        "end": "2001-10",
+        "description": "Programmer for mobile networks — assembler coding."
+      }
+    },
+    {
+      "id": "api-automation",
+      "name": "API Automation",
+      "type": "skill",
+      "group": "testing",
+      "val": 13,
+      "metadata": {
+        "level": "Expert",
+        "years": 10,
+        "description": "End-to-end API test automation using Postman (JavaScript), Runscope, and SOAPUI. Increased test coverage by 60x at SCAYLE."
+      }
+    },
+    {
+      "id": "test-strategy",
+      "name": "Test Strategy",
+      "type": "skill",
+      "group": "testing",
+      "val": 12,
+      "metadata": {
+        "level": "Expert",
+        "years": 12,
+        "description": "Creating and implementing long-term test strategies, defining milestones, reviewing and auditing testing approaches across multiple companies."
+      }
+    },
+    {
+      "id": "sdlc",
+      "name": "SDLC",
+      "type": "skill",
+      "group": "testing",
+      "val": 11,
+      "metadata": {
+        "level": "Expert",
+        "years": 15,
+        "description": "Deep understanding of the Software Development Lifecycle and quality gates at each phase."
+      }
+    },
+    {
+      "id": "e2e-testing",
+      "name": "E2E Test Automation",
+      "type": "skill",
+      "group": "testing",
+      "val": 11,
+      "metadata": {
+        "level": "Expert",
+        "years": 10,
+        "description": "End-to-end test automation for both frontend and backend applications. Used Ranorex, TestCafe, Selenium, and Protractor."
+      }
+    },
+    {
+      "id": "regression-testing",
+      "name": "Regression Testing",
+      "type": "skill",
+      "group": "testing",
+      "val": 10,
+      "metadata": {
+        "level": "Expert",
+        "years": 12,
+        "description": "Creating, developing and executing regression test suites based on customer-specific use cases."
+      }
+    },
+    {
+      "id": "defect-management",
+      "name": "Defect Management",
+      "type": "skill",
+      "group": "testing",
+      "val": 9,
+      "metadata": {
+        "level": "Expert",
+        "years": 10,
+        "description": "Improving defect management processes, writing and tracking bugs/tasks through full lifecycle."
+      }
+    },
+    {
+      "id": "performance-testing",
+      "name": "Performance Testing",
+      "type": "skill",
+      "group": "testing",
+      "val": 9,
+      "metadata": {
+        "level": "Advanced",
+        "years": 7,
+        "description": "Automation and standardization of performance testing over 10+ microservices using JMeter → ADO pipeline → Blazemeter."
+      }
+    },
+    {
+      "id": "risk-management",
+      "name": "Risk Management",
+      "type": "skill",
+      "group": "testing",
+      "val": 9,
+      "metadata": {
+        "level": "Expert",
+        "years": 8,
+        "description": "Excellent understanding of Risk Management and its application in everyday QA and engineering work."
+      }
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "type": "skill",
+      "group": "tools",
+      "val": 11,
+      "metadata": {
+        "level": "Expert",
+        "years": 8,
+        "description": "API testing automation via Postman (JavaScript). Primary tool for API test strategy at SCAYLE."
+      }
+    },
+    {
+      "id": "runscope",
+      "name": "Runscope",
+      "type": "skill",
+      "group": "tools",
+      "val": 8,
+      "metadata": {
+        "level": "Advanced",
+        "years": 5,
+        "description": "API monitoring and testing with Runscope."
+      }
+    },
+    {
+      "id": "jmeter",
+      "name": "JMeter",
+      "type": "skill",
+      "group": "tools",
+      "val": 10,
+      "metadata": {
+        "level": "Advanced",
+        "years": 7,
+        "description": "Performance and load testing using Apache JMeter, integrated into ADO pipelines."
+      }
+    },
+    {
+      "id": "blazemeter",
+      "name": "Blazemeter",
+      "type": "skill",
+      "group": "tools",
+      "val": 9,
+      "metadata": {
+        "level": "Advanced",
+        "years": 6,
+        "description": "Cloud-scale performance testing via Blazemeter, part of JMeter → ADO → Blazemeter pipeline."
+      }
+    },
+    {
+      "id": "ranorex",
+      "name": "Ranorex",
+      "type": "skill",
+      "group": "tools",
+      "val": 8,
+      "metadata": {
+        "level": "Advanced",
+        "years": 5,
+        "description": "UI test automation framework used at AerData for frontend test automation."
+      }
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium",
+      "type": "skill",
+      "group": "tools",
+      "val": 7,
+      "metadata": {
+        "level": "Intermediate",
+        "years": 4,
+        "description": "Web UI automation with Selenium WebDriver."
+      }
+    },
+    {
+      "id": "testcafe",
+      "name": "TestCafe",
+      "type": "skill",
+      "group": "tools",
+      "val": 7,
+      "metadata": {
+        "level": "Intermediate",
+        "years": 3,
+        "description": "Node.js-based end-to-end testing framework."
+      }
+    },
+    {
+      "id": "soapui",
+      "name": "SOAPUI",
+      "type": "skill",
+      "group": "tools",
+      "val": 7,
+      "metadata": {
+        "level": "Advanced",
+        "years": 5,
+        "description": "API testing for SOAP and REST services."
+      }
+    },
+    {
+      "id": "gitlab-cicd",
+      "name": "GitLab CI/CD",
+      "type": "skill",
+      "group": "devops",
+      "val": 10,
+      "metadata": {
+        "level": "Advanced",
+        "years": 5,
+        "description": "Implemented CI/CD pipelines in GitLab for automated test execution and E2E testing of backend applications."
+      }
+    },
+    {
+      "id": "azuredevops",
+      "name": "Azure DevOps",
+      "type": "skill",
+      "group": "devops",
+      "val": 10,
+      "metadata": {
+        "level": "Advanced",
+        "years": 7,
+        "description": "Test plan management, pipeline automation, and defect tracking in Microsoft Azure DevOps."
+      }
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "type": "skill",
+      "group": "devops",
+      "val": 9,
+      "metadata": {
+        "level": "Advanced",
+        "years": 10,
+        "description": "JavaScript for API test automation (Postman scripts), web development (e-Studio), and test frameworks."
+      }
+    },
+    {
+      "id": "agile-safe-scrum",
+      "name": "Agile / SAFe / Scrum",
+      "type": "skill",
+      "group": "agile",
+      "val": 12,
+      "metadata": {
+        "level": "Expert",
+        "years": 10,
+        "description": "Deep experience in Agile and SAFe frameworks. Introducing and improving Scrum processes & ceremonies at The Emirates Group."
+      }
+    },
+    {
+      "id": "shift-left",
+      "name": "Shift Left Testing",
+      "type": "skill",
+      "group": "agile",
+      "val": 8,
+      "metadata": {
+        "level": "Expert",
+        "years": 7,
+        "description": "Applying shift-left principles — involving QA earlier in the SDLC to catch defects sooner."
+      }
+    },
+    {
+      "id": "policies-processes",
+      "name": "Policies & Procedures",
+      "type": "skill",
+      "group": "soft",
+      "val": 9,
+      "metadata": {
+        "level": "Expert",
+        "description": "Creating and implementing QA policies, processes, and procedures across multiple organisations to establish quality baselines."
+      }
+    },
+    {
+      "id": "people-process-tech",
+      "name": "People–Process–Tech",
+      "type": "skill",
+      "group": "soft",
+      "val": 9,
+      "metadata": {
+        "level": "Expert",
+        "description": "Applying the People–Process–Technology framework to drive quality improvement across teams."
+      }
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "type": "skill",
+      "group": "soft",
+      "val": 7,
+      "metadata": {
+        "level": "Expert",
+        "description": "Clear communication with stakeholders at all levels — from developers to investors."
+      }
+    },
+    {
+      "id": "problem-solving",
+      "name": "Problem-Solving",
+      "type": "skill",
+      "group": "soft",
+      "val": 8,
+      "metadata": {
+        "level": "Expert",
+        "description": "Analytical approach to identifying root causes and designing sustainable solutions."
+      }
+    },
+    {
+      "id": "analytical",
+      "name": "Analytical Thinking",
+      "type": "skill",
+      "group": "soft",
+      "val": 8,
+      "metadata": {
+        "level": "Expert",
+        "description": "Data-driven analysis of test results, market conditions, and process metrics."
+      }
+    },
+    {
+      "id": "istqb-cert",
+      "name": "ISTQB Certified Tester",
+      "type": "cert",
+      "group": "cert",
+      "val": 10,
+      "metadata": {
+        "issuer": "ISTQB",
+        "description": "Foundation Level Certified Tester — international standard for software testing qualification."
+      }
+    },
+    {
+      "id": "istqb-agile-cert",
+      "name": "ISTQB Agile Tester",
+      "type": "cert",
+      "group": "cert",
+      "val": 9,
+      "metadata": {
+        "issuer": "ISTQB",
+        "description": "ISTQB Certified Agile Tester — specialisation in Agile testing methodologies."
+      }
+    },
+    {
+      "id": "zagreb-uni",
+      "name": "Zagreb Univ. Applied Sciences",
+      "type": "education",
+      "group": "education",
+      "val": 12,
+      "metadata": {
+        "company": "Zagreb University of Applied Sciences",
+        "title": "Computer Science Engineer",
+        "year": 2001,
+        "grade": "4.54 / 5.0",
+        "description": "Computer Science Engineering degree with high distinction (average grade 4.54 out of 5.0)."
+      }
+    },
+    {
+      "id": "english",
+      "name": "English (C1)",
+      "type": "language",
+      "group": "language",
+      "val": 7,
+      "metadata": {
+        "level": "C1 Advanced",
+        "description": "Professional working proficiency — C1 Advanced level."
+      }
+    },
+    {
+      "id": "german",
+      "name": "German (B1)",
+      "type": "language",
+      "group": "language",
+      "val": 6,
+      "metadata": {
+        "level": "B1 Intermediate",
+        "description": "Intermediate conversational German — B1 level."
+      }
+    },
+    {
+      "id": "croatian",
+      "name": "Croatian (Native)",
+      "type": "language",
+      "group": "language",
+      "val": 7,
+      "metadata": {
+        "level": "Native",
+        "description": "Native language."
+      }
+    },
+    {
+      "id": "chess",
+      "name": "Chess (Elo 2000)",
+      "type": "hobby",
+      "group": "hobby",
+      "val": 9,
+      "metadata": {
+        "description": "Competitive chess player with Elo rating of 2000 — a strong club/tournament level."
+      }
+    },
+    {
+      "id": "guitar",
+      "name": "Guitar",
+      "type": "hobby",
+      "group": "hobby",
+      "val": 6,
+      "metadata": {
+        "description": "Playing guitar as a creative hobby."
+      }
+    },
+    {
+      "id": "badminton",
+      "name": "Badminton",
+      "type": "hobby",
+      "group": "hobby",
+      "val": 6,
+      "metadata": {
+        "description": "Playing badminton for fitness and recreation."
+      }
+    },
+    {
+      "id": "nist-csf",
+      "name": "NIST CyberSecurity",
+      "type": "skill",
+      "group": "infosec",
+      "val": 7,
+      "metadata": {
+        "standard": "NIST CyberSecurity Framework / NIST800-53r4",
+        "description": "Applied NIST CyberSecurity Framework and NIST800-53r4 controls in aviation software QA."
+      }
+    },
+    {
+      "id": "owasp",
+      "name": "OWASP",
+      "type": "skill",
+      "group": "infosec",
+      "val": 7,
+      "metadata": {
+        "standard": "OWASP Top 10",
+        "description": "Security testing using OWASP guidelines. ISTQB Security Tester knowledge."
+      }
+    },
+    {
+      "id": "sans",
+      "name": "SANS / InfoSec",
+      "type": "skill",
+      "group": "infosec",
+      "val": 6,
+      "metadata": {
+        "standard": "SANS Institute",
+        "description": "Security awareness and InfoSec fundamentals from SANS training."
+      }
+    }
+  ],
+  "links": [
+    { "source": "zoran", "target": "emirates",         "relation": "currently works at" },
+    { "source": "zoran", "target": "scayle",           "relation": "worked at" },
+    { "source": "zoran", "target": "aerdata",          "relation": "worked at" },
+    { "source": "zoran", "target": "digitalium",       "relation": "worked at" },
+    { "source": "zoran", "target": "oglasnik",         "relation": "worked at" },
+    { "source": "zoran", "target": "distribucija",     "relation": "worked at" },
+    { "source": "zoran", "target": "estudio",          "relation": "founded" },
+    { "source": "zoran", "target": "siemens",          "relation": "worked at" },
+    { "source": "zoran", "target": "zagreb-uni",       "relation": "studied at" },
+    { "source": "zoran", "target": "istqb-cert",       "relation": "certified" },
+    { "source": "zoran", "target": "istqb-agile-cert", "relation": "certified" },
+    { "source": "zoran", "target": "api-automation",   "relation": "expert in" },
+    { "source": "zoran", "target": "test-strategy",    "relation": "expert in" },
+    { "source": "zoran", "target": "sdlc",             "relation": "expert in" },
+    { "source": "zoran", "target": "agile-safe-scrum", "relation": "expert in" },
+    { "source": "zoran", "target": "policies-processes","relation": "applies" },
+    { "source": "zoran", "target": "people-process-tech","relation": "applies" },
+    { "source": "zoran", "target": "communication",    "relation": "skill" },
+    { "source": "zoran", "target": "problem-solving",  "relation": "skill" },
+    { "source": "zoran", "target": "analytical",       "relation": "skill" },
+    { "source": "zoran", "target": "english",          "relation": "speaks" },
+    { "source": "zoran", "target": "german",           "relation": "speaks" },
+    { "source": "zoran", "target": "croatian",         "relation": "native" },
+    { "source": "zoran", "target": "chess",            "relation": "hobby" },
+    { "source": "zoran", "target": "guitar",           "relation": "hobby" },
+    { "source": "zoran", "target": "badminton",        "relation": "hobby" },
+
+    { "source": "emirates", "target": "agile-safe-scrum",  "relation": "uses" },
+    { "source": "emirates", "target": "sdlc",              "relation": "uses" },
+    { "source": "emirates", "target": "policies-processes","relation": "uses" },
+    { "source": "emirates", "target": "people-process-tech","relation": "uses" },
+    { "source": "emirates", "target": "risk-management",   "relation": "uses" },
+
+    { "source": "scayle", "target": "api-automation",   "relation": "used" },
+    { "source": "scayle", "target": "postman",          "relation": "used" },
+    { "source": "scayle", "target": "javascript",       "relation": "used" },
+    { "source": "scayle", "target": "gitlab-cicd",      "relation": "used" },
+    { "source": "scayle", "target": "test-strategy",    "relation": "used" },
+    { "source": "scayle", "target": "defect-management","relation": "used" },
+    { "source": "scayle", "target": "regression-testing","relation": "used" },
+    { "source": "scayle", "target": "e2e-testing",      "relation": "used" },
+
+    { "source": "aerdata", "target": "ranorex",            "relation": "used" },
+    { "source": "aerdata", "target": "jmeter",             "relation": "used" },
+    { "source": "aerdata", "target": "blazemeter",         "relation": "used" },
+    { "source": "aerdata", "target": "azuredevops",        "relation": "used" },
+    { "source": "aerdata", "target": "selenium",           "relation": "used" },
+    { "source": "aerdata", "target": "soapui",             "relation": "used" },
+    { "source": "aerdata", "target": "testcafe",           "relation": "used" },
+    { "source": "aerdata", "target": "javascript",         "relation": "used" },
+    { "source": "aerdata", "target": "e2e-testing",        "relation": "applied" },
+    { "source": "aerdata", "target": "performance-testing","relation": "applied" },
+    { "source": "aerdata", "target": "test-strategy",      "relation": "applied" },
+    { "source": "aerdata", "target": "shift-left",         "relation": "applied" },
+    { "source": "aerdata", "target": "risk-management",    "relation": "applied" },
+    { "source": "aerdata", "target": "nist-csf",           "relation": "applied" },
+    { "source": "aerdata", "target": "owasp",              "relation": "applied" },
+    { "source": "aerdata", "target": "sans",               "relation": "applied" },
+    { "source": "aerdata", "target": "runscope",           "relation": "used" },
+
+    { "source": "digitalium", "target": "e2e-testing",      "relation": "used" },
+    { "source": "digitalium", "target": "regression-testing","relation": "used" },
+    { "source": "digitalium", "target": "defect-management","relation": "used" },
+
+    { "source": "oglasnik", "target": "javascript",     "relation": "used" },
+    { "source": "oglasnik", "target": "problem-solving","relation": "applied" },
+    { "source": "oglasnik", "target": "analytical",     "relation": "applied" },
+
+    { "source": "api-automation",    "target": "postman",    "relation": "primary tool" },
+    { "source": "api-automation",    "target": "runscope",   "relation": "tool" },
+    { "source": "performance-testing","target": "jmeter",    "relation": "uses" },
+    { "source": "performance-testing","target": "blazemeter","relation": "uses" },
+    { "source": "jmeter",            "target": "blazemeter", "relation": "integrates" },
+    { "source": "e2e-testing",       "target": "ranorex",    "relation": "uses" },
+    { "source": "e2e-testing",       "target": "selenium",   "relation": "uses" },
+    { "source": "e2e-testing",       "target": "testcafe",   "relation": "uses" },
+
+    { "source": "istqb-cert",       "target": "test-strategy",    "relation": "validates" },
+    { "source": "istqb-agile-cert", "target": "agile-safe-scrum", "relation": "validates" },
+
+    { "source": "zagreb-uni", "target": "javascript", "relation": "foundation for" },
+    { "source": "zagreb-uni", "target": "sdlc",       "relation": "foundation for" }
+  ]
+}
