@@ -62,7 +62,7 @@ export default function DetailPanel() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '100%', opacity: 0 }}
             transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-            className="fixed top-0 right-0 h-full z-30 w-80 bg-[#080f18]/95 backdrop-blur-lg border-l border-white/10 flex flex-col overflow-hidden"
+            className="fixed top-0 right-0 h-full z-30 w-[calc(100vw-0.5rem)] sm:w-80 bg-[#080f18]/95 backdrop-blur-lg border-l border-white/10 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div

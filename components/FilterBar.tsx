@@ -7,7 +7,7 @@ export default function FilterBar() {
   const { activeFilters, toggleFilter, clearFilters } = useCVContext()
 
   return (
-    <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-1.5 max-w-xs">
+    <div className="absolute top-12 sm:top-4 left-2 sm:left-4 z-10 flex flex-wrap gap-1 sm:gap-1.5 max-w-[calc(100vw-1rem)] sm:max-w-xs">
       {activeFilters.length > 0 && (
         <button
           onClick={clearFilters}

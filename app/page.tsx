@@ -23,8 +23,8 @@ function CVApp() {
   return (
     <div className="relative w-screen h-screen bg-[#050A0E] overflow-hidden">
       {/* Header identity strip */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
-        <p className="text-white/40 text-xs tracking-[0.2em] uppercase">
+      <div className="absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none px-2">
+        <p className="text-white/40 text-[10px] sm:text-xs tracking-[0.2em] uppercase leading-relaxed">
           Zoran Šapić · Quality Manager / Lead Senior QA Engineer
         </p>
       </div>
@@ -55,7 +55,7 @@ function CVApp() {
 
       {/* Bottom hint */}
       {activeView === 'graph' && (
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 text-slate-600 text-xs pointer-events-none">
+        <div className="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-10 text-slate-600 text-[10px] sm:text-xs pointer-events-none hidden sm:block whitespace-nowrap">
           Drag · Scroll to zoom · Click a node to explore
         </div>
       )}

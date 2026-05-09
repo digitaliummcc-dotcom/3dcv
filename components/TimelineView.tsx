@@ -52,11 +52,11 @@ export default function TimelineView() {
   )
 
   return (
-    <div className="timeline-scroll h-full overflow-y-auto px-6 py-8 max-w-2xl mx-auto">
+    <div className="timeline-scroll h-full overflow-y-auto px-4 sm:px-6 py-6 sm:py-8 max-w-2xl mx-auto">
       {/* Header */}
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold text-white">Career Timeline</h2>
-        <p className="text-slate-400 text-sm mt-1">25+ years of experience — click any event to explore</p>
+      <div className="mb-8 sm:mb-10">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white">Career Timeline</h2>
+        <p className="text-slate-400 text-xs sm:text-sm mt-1">25+ years of experience — click any event to explore</p>
       </div>
 
       <div className="relative">
