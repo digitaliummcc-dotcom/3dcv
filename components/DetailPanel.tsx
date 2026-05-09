@@ -7,15 +7,21 @@ import { GROUP_COLORS, TYPE_LABEL } from '@/lib/colors'
 import type { GraphNode } from '@/lib/types'
 import rawData from '@/data/graph.json'
 
-function getConnectedNodes(nodeId: string): GraphNode[] {
+function getConnectedNodes(node: GraphNode): GraphNode[] {
+  // Hub nodes carry an explicit children list
+  if (node.metadata?.children) {
+    const childIds = node.metadata.children as string[]
+    return rawData.nodes.filter(n => childIds.includes(n.id)) as GraphNode[]
+  }
+
   const connected = new Set<string>()
   rawData.links.forEach(l => {
     const src = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id
     const tgt = typeof l.target === 'string' ? l.target : (l.target as GraphNode).id
-    if (src === nodeId) connected.add(tgt)
-    if (tgt === nodeId) connected.add(src)
+    if (src === node.id) connected.add(tgt)
+    if (tgt === node.id) connected.add(src)
   })
-  connected.delete(nodeId)
+  connected.delete(node.id)
   return rawData.nodes.filter(n => connected.has(n.id)) as GraphNode[]
 }
 
@@ -30,7 +36,7 @@ function MetaRow({ label, value }: { label: string; value?: string | number }) {
 }
 
 export default function DetailPanel() {
-  const { selectedNode, setSelectedNode } = useCVContext()
+  const { selectedNode, setSelectedNode, setHighlightNodeId } = useCVContext()
 
   // Close on Escape
   useEffect(() => {
@@ -155,7 +161,7 @@ export default function DetailPanel() {
               )}
 
               {/* Connected nodes */}
-              <ConnectedNodes node={selectedNode} onSelect={setSelectedNode} />
+              <ConnectedNodes node={selectedNode} onSelect={setSelectedNode} onHover={setHighlightNodeId} />
             </div>
           </motion.div>
         </>
@@ -170,14 +176,111 @@ function formatDate(dateStr: string): string {
   return month ? `${names[parseInt(month) - 1]} ${year}` : year
 }
 
+type SubGroup = { id: string; name: string; group: string; children: string[] }
+
 function ConnectedNodes({
   node,
   onSelect,
+  onHover,
 }: {
   node: GraphNode
   onSelect: (n: GraphNode) => void
+  onHover: (id: string | null) => void
 }) {
-  const connected = getConnectedNodes(node.id)
+  const allNodes = rawData.nodes as GraphNode[]
+
+  // ── Skills hub: nested tree with subGroups ──
+  if (node.metadata?.subGroups) {
+    const subGroups = node.metadata.subGroups as SubGroup[]
+    const total = subGroups.reduce((s, g) => s + g.children.length, 0)
+
+    return (
+      <div>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">
+          Sub-groups ({subGroups.length}) · {total} items
+        </h4>
+        <div className="space-y-3">
+          {subGroups.map(sg => {
+            const leaves = allNodes.filter(n => sg.children.includes(n.id))
+            return (
+              <div key={sg.id}>
+                <button
+                  className="flex items-center gap-2 mb-1.5 pl-1 w-full text-left hover:bg-white/5 rounded transition-colors py-0.5"
+                  onMouseEnter={() => onHover(sg.id)}
+                  onMouseLeave={() => onHover(null)}
+                >
+                  <div
+                    className="w-2.5 h-2.5 rounded-sm shrink-0"
+                    style={{ backgroundColor: GROUP_COLORS[sg.group] ?? '#fff' }}
+                  />
+                  <span
+                    className="text-[11px] font-semibold uppercase tracking-wider"
+                    style={{ color: GROUP_COLORS[sg.group] ?? '#fff' }}
+                  >
+                    {sg.name}
+                  </span>
+                  <span className="text-slate-600 text-[10px]">({leaves.length})</span>
+                </button>
+                <div className="space-y-0.5 ml-4 border-l border-white/8 pl-3">
+                  {leaves.map(n => (
+                    <button
+                      key={n.id}
+                      onClick={() => onSelect(n)}
+                      onMouseEnter={() => onHover(n.id)}
+                      onMouseLeave={() => onHover(null)}
+                      className="w-full flex items-center gap-2 px-2 py-1 rounded text-left text-xs hover:bg-white/8 transition-colors"
+                    >
+                      <div
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ backgroundColor: GROUP_COLORS[n.group] ?? '#fff' }}
+                      />
+                      <span className="text-slate-300 truncate">{n.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  // ── simple hub / sub-hub: flat children from metadata ──
+  if (node.metadata?.children) {
+    const childIds = node.metadata.children as string[]
+    const children = allNodes.filter(n => childIds.includes(n.id))
+    if (children.length === 0) return null
+
+    return (
+      <div>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+          Members ({children.length})
+        </h4>
+        <div className="space-y-1.5">
+          {children.map(n => (
+            <button
+              key={n.id}
+              onClick={() => onSelect(n)}
+              onMouseEnter={() => onHover(n.id)}
+              onMouseLeave={() => onHover(null)}
+              className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm hover:bg-white/8 transition-colors"
+            >
+              <div
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: GROUP_COLORS[n.group] ?? '#fff' }}
+              />
+              <span className="text-slate-300 truncate">{n.name}</span>
+              <span className="text-slate-600 text-xs ml-auto shrink-0">{n.type}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  // ── fallback: link-based lookup ──
+  const connected = getConnectedNodes(node)
   if (connected.length === 0) return null
 
   return (
@@ -190,6 +293,8 @@ function ConnectedNodes({
           <button
             key={n.id}
             onClick={() => onSelect(n)}
+            onMouseEnter={() => onHover(n.id)}
+            onMouseLeave={() => onHover(null)}
             className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm hover:bg-white/8 transition-colors"
           >
             <div

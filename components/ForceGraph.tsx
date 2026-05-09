@@ -52,7 +52,7 @@ function animateTo(
 }
 
 export default function ForceGraph() {
-  const { selectedNode, setSelectedNode, activeFilters } = useCVContext()
+  const { selectedNode, setSelectedNode, activeFilters, highlightNodeId } = useCVContext()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const graphRef = useRef<any>(null)
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
@@ -120,6 +120,18 @@ export default function ForceGraph() {
     return s
   }, [hoverTarget])
 
+  const highlightConnected = useMemo(() => {
+    if (!highlightNodeId) return new Set<string>()
+    const s = new Set([highlightNodeId])
+    rawData.links.forEach(l => {
+      const src = getNodeId(l.source)
+      const tgt = getNodeId(l.target)
+      if (src === highlightNodeId) s.add(tgt)
+      if (tgt === highlightNodeId) s.add(src)
+    })
+    return s
+  }, [highlightNodeId])
+
   const focusConnected = useMemo(() => {
     if (!focusNode) return new Set<string>()
     const s = new Set([focusNode.id])
@@ -176,12 +188,19 @@ export default function ForceGraph() {
         return lerpColor(base, BG, hoverProgress * 0.82)
       }
 
+      // Side-panel highlight (no animation — instant)
+      if (highlightNodeId) {
+        if (highlightNodeId === node.id) return '#ffffff'
+        if (highlightConnected.has(node.id)) return base
+        return lerpColor(base, BG, 0.82)
+      }
+
       // Selected highlight
       if (selectedNode?.id === node.id) return '#ffffff'
 
       return base
     },
-    [focusNode, focusProgress, hoverTarget, hoverProgress, hoverConnected, selectedNode]
+    [focusNode, focusProgress, hoverTarget, hoverProgress, hoverConnected, highlightNodeId, highlightConnected, selectedNode]
   )
 
   // ── glow ring via nodeThreeObject (replaces default sphere for selected) ──
@@ -214,26 +233,28 @@ export default function ForceGraph() {
     [selectedNode]
   )
 
+  const activeHoverId = highlightNodeId ?? hoverTarget?.id ?? null
+
   // ── link colours ──
   const linkColor = useCallback(
     (link: GraphLink) => {
-      if (!hoverTarget) return 'rgba(255,255,255,0.12)'
+      if (!activeHoverId) return 'rgba(255,255,255,0.12)'
       const src = getNodeId(link.source as string | GraphNode)
       const tgt = getNodeId(link.target as string | GraphNode)
-      if (src === hoverTarget.id || tgt === hoverTarget.id) return 'rgba(255,255,255,0.55)'
+      if (src === activeHoverId || tgt === activeHoverId) return 'rgba(255,255,255,0.55)'
       return 'rgba(255,255,255,0.04)'
     },
-    [hoverTarget]
+    [activeHoverId]
   )
 
   const linkWidth = useCallback(
     (link: GraphLink) => {
-      if (!hoverTarget) return 0.6
+      if (!activeHoverId) return 0.6
       const src = getNodeId(link.source as string | GraphNode)
       const tgt = getNodeId(link.target as string | GraphNode)
-      return src === hoverTarget.id || tgt === hoverTarget.id ? 2 : 0.3
+      return src === activeHoverId || tgt === activeHoverId ? 2 : 0.3
     },
-    [hoverTarget]
+    [activeHoverId]
   )
 
   // ── hover handler with animated transition ──

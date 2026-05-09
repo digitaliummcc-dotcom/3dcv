@@ -3,11 +3,13 @@
 import { createContext, useContext, useState, useCallback, ReactNode } from 'react'
 import type { GraphNode } from '@/lib/types'
 
-type View = 'graph' | 'timeline'
+type View = 'graph' | 'timeline' | 'clusters'
 
 interface CVContextValue {
   selectedNode: GraphNode | null
   setSelectedNode: (node: GraphNode | null) => void
+  highlightNodeId: string | null
+  setHighlightNodeId: (id: string | null) => void
   activeFilters: string[]
   toggleFilter: (group: string) => void
   clearFilters: () => void
@@ -19,6 +21,7 @@ const CVContext = createContext<CVContextValue | null>(null)
 
 export function CVProvider({ children }: { children: ReactNode }) {
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
+  const [highlightNodeId, setHighlightNodeId] = useState<string | null>(null)
   const [activeFilters, setActiveFilters] = useState<string[]>([])
   const [activeView, setActiveView] = useState<View>('graph')
 
@@ -35,6 +38,8 @@ export function CVProvider({ children }: { children: ReactNode }) {
       value={{
         selectedNode,
         setSelectedNode,
+        highlightNodeId,
+        setHighlightNodeId,
         activeFilters,
         toggleFilter,
         clearFilters,

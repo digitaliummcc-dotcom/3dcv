@@ -17,6 +17,15 @@ const ForceGraph = dynamic(() => import('@/components/ForceGraph'), {
   ),
 })
 
+const ClustersView = dynamic(() => import('@/components/ClustersView'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-screen text-slate-500 text-sm">
+      Loading clusters…
+    </div>
+  ),
+})
+
 function CVApp() {
   const { activeView } = useCVContext()
 
@@ -35,12 +44,20 @@ function CVApp() {
       {/* Filter chips — only shown in graph view */}
       {activeView === 'graph' && <FilterBar />}
 
-      {/* Main canvas */}
+      {/* Main canvas — graph view */}
       <div
         className="absolute inset-0 transition-opacity duration-300"
         style={{ opacity: activeView === 'graph' ? 1 : 0, pointerEvents: activeView === 'graph' ? 'auto' : 'none' }}
       >
         <ForceGraph />
+      </div>
+
+      {/* Clusters view */}
+      <div
+        className="absolute inset-0 transition-opacity duration-300"
+        style={{ opacity: activeView === 'clusters' ? 1 : 0, pointerEvents: activeView === 'clusters' ? 'auto' : 'none' }}
+      >
+        <ClustersView />
       </div>
 
       {/* Timeline */}
@@ -50,13 +67,18 @@ function CVApp() {
         </div>
       )}
 
-      {/* Detail panel — floats over both views */}
+      {/* Detail panel — floats over all views */}
       <DetailPanel />
 
       {/* Bottom hint */}
       {activeView === 'graph' && (
         <div className="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-10 text-slate-600 text-[10px] sm:text-xs pointer-events-none hidden sm:block whitespace-nowrap">
           Drag · Scroll to zoom · Click a node to explore
+        </div>
+      )}
+      {activeView === 'clusters' && (
+        <div className="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-10 text-slate-600 text-[10px] sm:text-xs pointer-events-none hidden sm:block whitespace-nowrap">
+          Scroll to zoom · Click a node to explore
         </div>
       )}
     </div>
