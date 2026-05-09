@@ -284,13 +284,12 @@ export default function ClustersView() {
     return s
   }, [selectedNode, clusterData.links])
 
+  // dimming only on click/select or side-panel hover — mouse hover just shows tooltip
   const effectiveHover = highlightNodeId
     ? { id: highlightNodeId, connected: highlightConnected }
-    : hoveredNode
-      ? { id: hoveredNode.id, connected: hoverConnected }
-      : selectedNode
-        ? { id: selectedNode.id, connected: selectedConnected }
-        : null
+    : selectedNode && selectedNode.group !== 'core'
+      ? { id: selectedNode.id, connected: selectedConnected }
+      : null
 
   // ── node color ──
   const nodeColor = useCallback(
@@ -385,9 +384,15 @@ export default function ClustersView() {
     if (!selectedNode || !graphRef.current) return
     const node = selectedNode as GraphNode & { x?: number; y?: number; z?: number }
     const distance = 78
-    const distRatio = 1 + distance / Math.hypot(node.x ?? 1, node.y ?? 1, node.z ?? 1)
+    const nx = node.x ?? 0
+    const ny = node.y ?? 0
+    const nz = node.z ?? 0
+    const h = Math.hypot(nx, ny, nz)
+    const distRatio = 1 + distance / (h || 1)
     graphRef.current.cameraPosition(
-      { x: (node.x ?? 0) * distRatio, y: (node.y ?? 0) * distRatio, z: (node.z ?? 0) * distRatio },
+      h > 0.001
+        ? { x: nx * distRatio, y: ny * distRatio, z: nz * distRatio }
+        : { x: 0, y: 0, z: distance },
       node,
       1200
     )
